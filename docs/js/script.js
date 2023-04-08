@@ -19,4 +19,4 @@ ss = date.getSeconds().toLocaleString()
 h.innerHTML = hh<10? '0'+hh+':':hh+':'
 m.innerHTML = mm<10? '0'+mm+':':mm+':'
 s.innerHTML = ss<10? '0'+ss:ss
-},1000)
+},1)
