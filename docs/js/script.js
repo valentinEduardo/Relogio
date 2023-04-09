@@ -1,22 +1,12 @@
-let h = document.querySelector('#h')
-let m = document.querySelector('#m')
-let s = document.querySelector('#s')
-
-let dia = document.querySelector('#d')
-let mes = document.querySelector('#me')
-let ano = document.querySelector('#a')
-
-var date = new Date();
-let d = date.toLocaleDateString('pt-br')
-
- dia.innerHTML = d
+const hora = document.getElementById("horas")
+const minuto = document.getElementById("minutos")
+const segundo = document.getElementById("segundos")
 
 
-setInterval(()=>{
-hh = date.getHours().toLocaleString()
-mm = date.getMinutes().toLocaleString()
-ss = date.getSeconds().toLocaleString()
-h.innerHTML = hh<10? '0'+hh+':':hh+':'
-m.innerHTML = mm<10? '0'+mm+':':mm+':'
-s.innerHTML = ss<10? '0'+ss:ss
+
+const relogio = setInterval(()=>{
+var date = new Date()
+ hora.innerHTML = (date.getHours()<10)?"0"+date.getHours():date.getHours()
+ minuto.innerHTML = (date.getMinutes()<10)?"0"+date.getMinutes():date.getMinutes()
+ segundo.innerHTML = (date.getSeconds()<10)?"0"+date.getSeconds():date.getSeconds()
 },1)

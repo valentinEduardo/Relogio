@@ -1,49 +1,62 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body{
-background: #123123;
+    background: linear-gradient(red, black);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.container{
-margin-top: 4cm;
-margin-left: 8cm;
-display: flex;
-justify-content: center;
+
+.relogio{
+    background: transparent;
+    border-radius: 3px;
+      /* por uma sombra na box */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.514);
+    width: 600px;
+    height: 200px;
+      /* elementos ao lado do outro */
+    display: flex;
+    /* alinhamento vertical */
+    align-items: center;
+      /* alinhamento horizontal */
+    justify-content:space-around;
+}
+
+.relogio div{
+     color: black;
+     background: rgb(185, 185, 185);
+     height: 120px;
+     width: 120px;
+     border-radius: 5px;
+     letter-spacing: 2px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+
+.relogio div span{
+    font-size: 60px;
+    font-weight: bold;
+}
+.relogio .tempo{
+    font-size: 20px;
+}
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title img{
 align-items: center;
-width: 800px;
-
-height: 400px;
-
-}
-#relogio{
-width: 400px;
-height: 400px;
-border-radius: 25px;
-border: 2px solid #111;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-border-radius: 1000px;
-color: aliceblue;
-
-}
-.conHora{
-display: flex;
-flex-direction: row;
-margin-bottom: 2cm;
-}
-.conDate{
-display: flex;
-flex-direction: row;
-}
-.horario{
-font-size: 80px;
-} 
-.dat{
-font-size: 40px;
+  width: 50%;
+  height: 80%;
 }
